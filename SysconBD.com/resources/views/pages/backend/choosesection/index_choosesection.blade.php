@@ -90,9 +90,7 @@
                         <div class="col-sm-12">
                             <div class="input-group mb-5">
                                 <label class="col-form-label">Details:</label>
-                                <textarea id="summernote" name="txtDetail">
-                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                </textarea>
+                                <textarea name="txtDetail" id="txtDetail" class="summernote"></textarea>
                             </div>
                         </div>
 
@@ -149,9 +147,7 @@
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
                                 <label class="col-form-label">Details:&nbsp;</label>
-                                <textarea class="summernote" name="txtDetail">
-									<div id="textarea"></div>
-								</textarea>
+                                <textarea class="summernote" id="eDetail" name="txtDetail"></textarea>
                             </div>
                         </div>
 						
@@ -227,7 +223,7 @@
 					$('#cmbChoosesectionId').val(eid);		
 					$('#eSn').val(response.choosesection.sn);
 					$('#eTitle').val(response.choosesection.title);
-					$('#textarea').html(response.choosesection.detail);
+					$('#eDetail').summernote('code', response.choosesection.detail);
 					$('#eIcon').val(response.choosesection.icon);
 				}
 			});

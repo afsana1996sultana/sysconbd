@@ -23,15 +23,12 @@ class TeamController extends Controller
         $team->facebook=$request->txtFacebook;
         $team->instagram=$request->txtInstagram;
         $team->linkedin=$request->txtLinkedin;
-        if(isset($request->filePhoto)){
-            $team->image=$request->filePhoto;
-            }
 
         $team->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+			$imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$team->image=$imageName;
 			$team->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -62,14 +59,12 @@ class TeamController extends Controller
         $team->facebook=$request->txtFacebook;
         $team->instagram=$request->txtInstagram;
         $team->linkedin=$request->txtLinkedin;
-        if(isset($request->filePhoto)){
-            $team->image=$request->filePhoto;
-            }
 
             $team->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+			    $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
+
                 $team->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

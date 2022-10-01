@@ -21,14 +21,11 @@ class ProjectcategoryController extends Controller
         $projectcategories->p_group=$request->txtGroup;
         $projectcategories->title=$request->txtTitle;
         $projectcategories->url=$request->txtURL;
-        if(isset($request->filePhoto)){
-            $projectcategories->image=$request->filePhoto;
-            }
-
+        
         $projectcategories->deleted_at=$request->txtDeleted_at;
         
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$projectcategories->image=$imageName;
 			$projectcategories->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -54,14 +51,11 @@ class ProjectcategoryController extends Controller
         $projectcategories->p_group=$request->txtGroup;
         $projectcategories->title=$request->txtTitle;
         $projectcategories->url=$request->txtURL;
-        if(isset($request->filePhoto)){
-            $projectcategories->image=$request->filePhoto;
-            }
-
+    
         $projectcategories->deleted_at=$request->txtDeleted_at;	
 
         if(isset($request->filePhoto)){
-            $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
             $projectcategories->image=$imageName;
             $request->filePhoto->move(public_path('img'),$imageName);
         }	   

@@ -38,7 +38,7 @@ class AdditionalimageController extends Controller
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$additionalimage->image=$imageName;
 			$additionalimage->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -77,7 +77,7 @@ class AdditionalimageController extends Controller
             $additionalimage->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $additionalimage->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

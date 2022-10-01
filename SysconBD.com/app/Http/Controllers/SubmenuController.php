@@ -28,15 +28,13 @@ class SubmenuController extends Controller
         $submenu->submenu_name=$request->txtSubmenuName;
         $submenu->submenu_url=$request->txtURL;
         $submenu->status=$request->txtStatus;
-        if(isset($request->fileIcon)){
-            $submenu->icon=$request->fileIcon;
-            }
+        
 
         $submenu->deleted_at=$request->txtDeleted_at;
         $submenu->save();
 
         if(isset($request->fileIcon)){
-			$iconName = (rand(100,1000)).'.'.$request->fileIcon->extension();
+            $iconName = time().(rand(100,1000)).'.'.$request->fileIcon->extension();
 			$submenu->icon=$iconName;
 			$submenu->update();
 			$request->fileIcon->move(public_path('img'),$iconName);
@@ -62,14 +60,11 @@ class SubmenuController extends Controller
         $submenu->submenu_name=$request->txtSubmenuName;
         $submenu->submenu_url=$request->txtURL;
         $submenu->status=$request->txtStatus;
-        if(isset($request->fileIcon)){
-            $submenu->icon=$request->fileIcon;
-            }
-
+       
         $submenu->deleted_at=$request->txtDeleted_at;
         
         if(isset($request->fileIcon)){
-            $iconName = (rand(100,1000)).'.'.$request->fileIcon->extension();
+            $iconName = time().(rand(100,1000)).'.'.$request->fileIcon->extension();
             $submenu->icon=$iconName;
             $request->fileIcon->move(public_path('img'),$iconName);
         }

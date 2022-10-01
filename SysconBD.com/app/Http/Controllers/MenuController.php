@@ -20,15 +20,13 @@ class MenuController extends Controller
         $menu->url=$request->txtURL;
         $menu->status=$request->txtStatus;
         $menu->serial_no=$request->txtSerialNo;
-        if(isset($request->fileIcon)){
-            $menu->icon=$request->fileIcon;
-            }
+       
 
         $menu->deleted_at=$request->txtDeleted_at;
         $menu->save();
 
         if(isset($request->fileIcon)){
-			$iconName = (rand(100,1000)).'.'.$request->fileIcon->extension();
+            $iconName = time().(rand(100,1000)).'.'.$request->fileIcon->extension();
 			$menu->icon=$iconName;
 			$menu->update();
 			$request->fileIcon->move(public_path('img'),$iconName);
@@ -55,14 +53,11 @@ class MenuController extends Controller
         $menu->url=$request->txtURL;
         $menu->status=$request->txtStatus;
         $menu->serial_no=$request->txtSerialNo;
-        if(isset($request->fileIcon)){
-            $menu->icon=$request->fileIcon;
-            }
 
         $menu->deleted_at=$request->txtDeleted_at;
         
         if(isset($request->fileIcon)){
-            $iconName = (rand(100,1000)).'.'.$request->fileIcon->extension();
+            $iconName = time().(rand(100,1000)).'.'.$request->fileIcon->extension();
             $menu->icon=$iconName;
             $request->fileIcon->move(public_path('img'),$iconName);
         }

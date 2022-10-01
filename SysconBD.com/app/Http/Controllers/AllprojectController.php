@@ -27,7 +27,7 @@ class AllprojectController extends Controller
         $allproject->deleted_at=$request->txtDeleted_at;
         
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$allproject->image=$imageName;
 			$allproject->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -60,7 +60,7 @@ class AllprojectController extends Controller
         $allproject->deleted_at=$request->txtDeleted_at;	
 
         if(isset($request->filePhoto)){
-            $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
             $allproject->image=$imageName;
             $request->filePhoto->move(public_path('img'),$imageName);
         }	   

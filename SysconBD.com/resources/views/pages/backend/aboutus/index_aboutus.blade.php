@@ -98,16 +98,14 @@
 							</div>
 						</div>
 
-                        <!-- /.card-header -->
-                        <div class="col-sm-12">
+
+						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-                                	<label class="col-form-label">Details:</label>
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -176,20 +174,18 @@
 							</div>
 						</div>
 
-							
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
 					
+
 						<div class="col-sm-12">
 							<div class="input-group mb-5">
 								<div class="col-sm-2">
@@ -203,10 +199,10 @@
 						</div>	
 					</div>
 
-						<div class="submit-section float-right">
-							<button type="button" class="btn btn-secondary" style="width:80px;" data-dismiss="modal">Cancle</button>
-							<input class="btn btn-primary submit-btn" type="submit"  name="btnUpdate" value="Update">
-						</div>
+					<div class="submit-section float-right">
+						<button type="button" class="btn btn-secondary" style="width:80px;" data-dismiss="modal">Cancle</button>
+						<input class="btn btn-primary submit-btn" type="submit"  name="btnUpdate" value="Update">
+					</div>
 				</form>
 			</div>
 		</div>
@@ -268,7 +264,7 @@
 					$('#cmbAboutusId').val(eid);		
 					$('#eTitle').val(response.aboutus.title);
 					$('#eHeading').val(response.aboutus.heading);
-					$('#textarea').html(response.aboutus.details);
+					$('#eDetails').summernote('code', response.aboutus.details);
 					$("#eFilephoto").html(
                         `<img src="img/${response.aboutus.image}" width="100" class="img-fluid img-thumbnail">`);
 				}

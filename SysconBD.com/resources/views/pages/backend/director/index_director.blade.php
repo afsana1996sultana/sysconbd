@@ -142,15 +142,13 @@
 						</div>
 
                         <!-- /.card-header -->
-                        <div class="col-sm-12">
+						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-									<label class="col-form-label">Details:</label>
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -298,18 +296,18 @@
 							</div>
 						</div>
 							
+
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
 						<div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -431,7 +429,7 @@
 					$('#eDesignation').val(response.director.designation);
 					$('#ePhone').val(response.director.phone);
 					$('#eEmail').val(response.director.email);
-					$('#textarea').html(response.director.details);
+					$('#eDetails').summernote('code', response.director.details);
 					$('#eFacebook').val(response.director.facebook);
 					$('#eTwitter').val(response.director.twitter);
 					$('#eLinkedin').val(response.director.linkedin);

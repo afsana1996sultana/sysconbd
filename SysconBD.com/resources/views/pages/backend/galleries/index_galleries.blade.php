@@ -105,18 +105,17 @@
 						</div>
 
                          <!-- /.card-header -->
-                         <div class="col-sm-12">
+						 <div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-									<label class="col-form-label">Details:</label>
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -195,18 +194,16 @@
 								</div>
 							</div>
 						</div>
-						
-							
+
+
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-									<label class="col-form-label">Details:&nbsp;</label>	
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-                              `  <textarea class="summernote" name="txtDetails">
-									<div id="textarea"></div>
-								</textarea>`
-                            `</div>
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
+                            	</div>
                             </div>
                         </div>
 					
@@ -302,7 +299,7 @@
 					$('#cmbGalleriesId').val(eid);		
 					$('#eCategory').val(response.galleries.category);
 					$('#eTitle').val(response.galleries.title);
-					$('#textarea').html(response.galleries.details);
+					$('#eDetails').summernote('code', response.galleries.details);
 					$("#eFilephoto").html(
                         `<img src="img/${response.galleries.image}" width="100" class="img-fluid img-thumbnail">`);
 					$("#eAttach_file").html(
@@ -315,7 +312,4 @@
 	});
 
 </script>
-
-
-
 @endsection

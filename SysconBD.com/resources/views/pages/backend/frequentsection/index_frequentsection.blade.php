@@ -87,15 +87,13 @@
 						</div>
 
                         <!-- /.card-header -->
-                        <div class="col-sm-12">
+						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-									<label class="col-form-label">Answer:</label>
+									<label class="col-form-label">Answer:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea id="summernote" name="txtAnswer">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtAnswer" id="txtAnswer" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -138,26 +136,24 @@
 								</div>
 							</div>
 						</div>
-				
-								
+						
+						
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Answer:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea class="summernote" name="txtAnswer">
-										<div id="textarea"></div>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea class="summernote" id="eAnswer" name="txtAnswer"></textarea>
                             	</div>
                             </div>
-                        </div>	
+                        </div>
 					</div>
 
-						<div class="submit-section float-right">
-							<button type="button" class="btn btn-secondary" style="width:80px;" data-dismiss="modal">Cancle</button>
-							<input class="btn btn-primary submit-btn" type="submit"  name="btnUpdate" value="Update">
-						</div>
+					<div class="submit-section float-right">
+						<button type="button" class="btn btn-secondary" style="width:80px;" data-dismiss="modal">Cancle</button>
+						<input class="btn btn-primary submit-btn" type="submit"  name="btnUpdate" value="Update">
+					</div>
 				</form>
 			</div>
 		</div>
@@ -219,6 +215,7 @@
 					$('#cmbFrequentsectionId').val(eid);		
 					$('#eQuestion').val(response.frequentsection.fre_question);
 					$('#textarea').html(response.frequentsection.fre_answer);
+					$('#eAnswer').summernote('code', response.frequentsection.fre_answer);
 				}
 			});
 		});

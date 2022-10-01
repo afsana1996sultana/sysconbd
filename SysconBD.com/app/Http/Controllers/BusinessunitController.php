@@ -19,8 +19,6 @@ class BusinessunitController extends Controller
 
         $data['BusinessData'] = Business::where('b_name',$SubmenuId->id)->first();
 
-      //  return $SubmenuId->id;
-
         $data['partner'] = Partner::select('id','image')->get();
 
         $data['bsctraining'] = Bsctraining::select('id','bt_name', 'bt_details', 'price', 'duration', 'icon')->get();
@@ -29,19 +27,12 @@ class BusinessunitController extends Controller
 
         $data['multiImg'] = Additionalimage::where('bu_name',$SubmenuId->id)->select('id','image','title')->get();
 
-       // return $data['multiImg'];
-
-
-        // View()->share($partner);
-
         if($request->url=="trainingschedule"){
           return view('frontend.trainingschedule', $data);
         }
 
         
-
         return view('frontend.business_unit', $data);
-
 
 
     }

@@ -19,15 +19,12 @@ class OurclientController extends Controller
         $ourclient->c_name=$request->txtClientName;
         $ourclient->c_type=$request->txtCompanyType;
         $ourclient->c_details=$request->txtCompanyDetails;
-        if(isset($request->filePhoto)){
-            $ourclient->logo_img=$request->filePhoto;
-            }
-
+      
         $ourclient->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$ourclient->logo_img=$imageName;
 			$ourclient->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -55,14 +52,11 @@ class OurclientController extends Controller
             $ourclient->c_name=$request->txtClientName;
             $ourclient->c_type=$request->txtCompanyType;
             $ourclient->c_details=$request->txtCompanyDetails;
-            if(isset($request->filePhoto)){
-                $ourclient->logo_img=$request->filePhoto;
-                }
 
             $ourclient->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $ourclient->logo_img=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

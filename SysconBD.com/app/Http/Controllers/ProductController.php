@@ -29,19 +29,12 @@ class ProductController extends Controller
         $product->heading=$request->txtHeading;
         $product->price=$request->txtPrice;
         $product->details=$request->txtDetails;
-        if(isset($request->filePhoto)){
-            $product->image=$request->filePhoto;
-            }
-
-        if(isset($request->fileAttach)){
-            $product->attach_file=$request->fileAttach;
-            }
 
         $product->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$product->image=$imageName;
 			$product->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -78,23 +71,17 @@ class ProductController extends Controller
             $product->heading=$request->txtHeading;
             $product->price=$request->txtPrice;
             $product->details=$request->txtDetails;
-            if(isset($request->filePhoto)){
-                $product->image=$request->filePhoto;
-                }
-    
-            if(isset($request->fileAttach)){
-                $product->attach_file=$request->fileAttach;
-                }
+       
             $product->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $product->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }
     
             if(isset($request->fileAttach)){
-                $attach_fileName = (rand(100,1000)).'.'.$request->fileAttach->extension();
+                $attach_fileName = time().(rand(100,1000)).'.'.$request->fileAttach->extension();
                 $product->attach_file=$attach_fileName;
                 $request->fileAttach->move(public_path('img'),$attach_fileName);
             }

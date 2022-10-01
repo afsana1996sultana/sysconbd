@@ -127,15 +127,13 @@
 						</div>
 
                         <!-- /.card-header -->
-                        <div class="col-sm-12">
+						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-3">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-9">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -270,9 +268,7 @@
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-9">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -390,7 +386,7 @@
 					$('#eBusinessUnitName').val(response.business.b_name);
 					$('#eTitle').val(response.business.title);
 					$('#eHeading').val(response.business.heading);
-					$('#textarea').html(response.business.details);
+					$('#eDetails').summernote('code', response.business.details);
 					$('#eOtherTitle').val(response.business.other_title);
 					$('#eOtherHeading').val(response.business.other_heading);
 					$('#eURL').val(response.business.url);

@@ -33,19 +33,12 @@ class ServiceController extends Controller
         $service->details=$request->txtDetails;
         $service->url=$request->txtURL;
         $service->icon=$request->txtIcon;
-        if(isset($request->filePhoto)){
-            $service->image=$request->filePhoto;
-            }
-
-        if(isset($request->fileAttach)){
-            $service->attach_file=$request->fileAttach;
-            }
 
         $service->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+			$imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$service->image=$imageName;
 			$service->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -81,23 +74,16 @@ class ServiceController extends Controller
             $service->url=$request->txtURL;
             $service->icon=$request->txtIcon;
 
-            if(isset($request->filePhoto)){
-                $service->image=$request->filePhoto;
-                }
-    
-            if(isset($request->fileAttach)){
-                $service->attach_file=$request->fileAttach;
-                }
             $service->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $service->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }
     
             if(isset($request->fileAttach)){
-                $attach_fileName = (rand(100,1000)).'.'.$request->fileAttach->extension();
+                $attach_fileName = time().(rand(100,1000)).'.'.$request->fileAttach->extension();
                 $service->attach_file=$attach_fileName;
                 $request->fileAttach->move(public_path('img'),$attach_fileName);
             }

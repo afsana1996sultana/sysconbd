@@ -1,8 +1,5 @@
 @extends('frontend.master')
 @section('main_content')
-<!-- <div id="success" style="display:none; height: 164px;width: 774px; background-color:blue;position:fixed;left: 33%;top: 28%;z-index: 1;border-radius: 26px;">
-<h1 style="color: white;">Store Succeeded!</h1>
-</div> -->
     <div id="rev_slider_one_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="mask-showcase" data-source="gallery" style="background:#ffffff;padding:0px;">
         <!-- START REVOLUTION SLIDER 5.4.1 fullscreen mode -->
         <div id="rev_slider_one" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.1">
@@ -511,12 +508,12 @@
                             <div class="project-item {{$val->p_group}}">
                                 <div class="projects-box">
                                     <div class="projects-thumbnail">
-                                        <a href="portfolio-details-1.html">
+                                        <a href="{{$val->url}}">
                                             <img src="{{ asset('img/' . $val->image) }}" alt="">
                                         </a>
                                     </div>
                                     <div class="portfolio-info">
-                                        <a class="overlay" href="portfolio-details-1.html"></a>
+                                        <a class="overlay" href="{{$val->url}}"></a>
                                         <div class="portfolio-info-inner">
                                             <h5><a href="{{$val->url}}">{{$val->title}}</a></h5>
                                             <p class="portfolio-cates">

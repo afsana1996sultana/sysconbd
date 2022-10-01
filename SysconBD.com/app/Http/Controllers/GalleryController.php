@@ -27,26 +27,20 @@ class GalleryController extends Controller
         $galleries->category=$request->txtCategory;
         $galleries->title=$request->txtTitle;
         $galleries->details=$request->txtDetails;
-        if(isset($request->filePhoto)){
-            $galleries->image=$request->filePhoto;
-            }
-
-        if(isset($request->fileAttach)){
-            $galleries->attach_file=$request->fileAttach;
-            }
 
         $galleries->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
+
 			$galleries->image=$imageName;
 			$galleries->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
 		}
 
         if(isset($request->fileAttach)){
-			$attach_fileName = (rand(100,1000)).'.'.$request->fileAttach->extension();
+            $attach_fileName = time().(rand(100,1000)).'.'.$request->fileAttach->extension();
 			$galleries->attach_file=$attach_fileName;
 			$galleries->update();
 			$request->fileAttach->move(public_path('img'),$attach_fileName);
@@ -73,23 +67,17 @@ class GalleryController extends Controller
             $galleries->category=$request->txtCategory;
             $galleries->title=$request->txtTitle;
             $galleries->details=$request->txtDetails;
-            if(isset($request->filePhoto)){
-                $galleries->image=$request->filePhoto;
-                }
-    
-            if(isset($request->fileAttach)){
-                $galleries->attach_file=$request->fileAttach;
-                }
+          
             $galleries->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $galleries->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }
     
             if(isset($request->fileAttach)){
-                $attach_fileName = (rand(100,1000)).'.'.$request->fileAttach->extension();
+                $attach_fileName = time().(rand(100,1000)).'.'.$request->fileAttach->extension();
                 $galleries->attach_file=$attach_fileName;
                 $request->fileAttach->move(public_path('img'),$attach_fileName);
             }

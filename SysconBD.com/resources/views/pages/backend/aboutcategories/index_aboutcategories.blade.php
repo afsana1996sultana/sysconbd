@@ -81,18 +81,6 @@
 								<input type="text" class="form-control" id="txtCategoryOfAbout" name="txtCategoryOfAbout"required>
 							</div>
 						</div>
-					
-
-						<!-- <div class="col-sm-10">
-							<div class="input-group mb-3">
-								<label class="col-form-label">URL:</label>
-								<input type="text" name="txtCategoryOfLink" class="form-control" placeholder="Enter URL" aria-label="Recipient's username" aria-describedby="basic-addon2">
-								<div class="input-group-append">
-									<button class="btn btn-success" type="submit">Generate Shorten Link</button>
-								</div>
-							</div>
-						</div> -->
-
 					</div>
 
 					<div class="submit-section float-right">

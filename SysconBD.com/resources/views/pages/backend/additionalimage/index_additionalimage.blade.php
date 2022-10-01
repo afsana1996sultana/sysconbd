@@ -136,9 +136,7 @@
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-9">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -243,16 +241,13 @@
 							</div>
 						</div>
 
-
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-3">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-9">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -346,7 +341,7 @@
 					$('#eTitle').val(response.additionalimage.title);
 					$('#eHeading').val(response.additionalimage.heading);
 					$('#eUrl').val(response.additionalimage.url);
-					$('#textarea').html(response.additionalimage.details);
+					$('#eDetails').summernote('code', response.additionalimage.details);
 					$('#eIcon').val(response.additionalimage.icon);
 					$("#eFilephoto").html(
                         `<img src="img/${response.additionalimage.image}" width="100" class="img-fluid img-thumbnail">`);

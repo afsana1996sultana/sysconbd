@@ -49,12 +49,12 @@
                             <div class="project-item {{$val->ap_group}}">
                                 <div class="projects-box">
                                     <div class="projects-thumbnail">
-                                        <a href="portfolio-details-1.html">
+                                        <a href="{{$val->url}}">
                                             <img src="{{ asset('img/' . $val->image) }}" alt="">
                                         </a>
                                     </div>
                                     <div class="portfolio-info">
-                                        <a class="overlay" href="portfolio-details-1.html"></a>
+                                        <a class="overlay" href="{{$val->url}}"></a>
                                         <div class="portfolio-info-inner">
                                             <h5><a href="{{$val->url}}">{{$val->title}}</a></h5>
                                             <p class="portfolio-cates">

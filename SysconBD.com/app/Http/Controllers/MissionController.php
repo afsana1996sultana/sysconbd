@@ -18,15 +18,12 @@ class MissionController extends Controller
         $mission=new Mission; 
         $mission->name=$request->txtName;
         $mission->details=$request->txtDetails;
-        if(isset($request->filePhoto)){
-            $mission->image=$request->filePhoto;
-            }
 
         $mission->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$mission->image=$imageName;
 			$mission->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -51,14 +48,10 @@ class MissionController extends Controller
         $mission->id=$request->cmbMissionId;
         $mission->name=$request->txtName;
         $mission->details=$request->txtDetails;
-        if(isset($request->filePhoto)){
-            $mission->image=$request->filePhoto;
-            }
-
             $mission->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $mission->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

@@ -28,15 +28,12 @@ class ProjectController extends Controller
         $project->title=$request->txtTitle;
         $project->details=$request->txtDetails;
         $project->url=$request->txtURL;
-        if(isset($request->filePhoto)){
-            $project->image=$request->filePhoto;
-            }
-
+       
         $project->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+			$imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$project->image=$imageName;
 			$project->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -64,14 +61,11 @@ class ProjectController extends Controller
             $project->title=$request->txtTitle;
             $project->details=$request->txtDetails;
             $project->url=$request->txtURL;
-            if(isset($request->filePhoto)){
-                $project->image=$request->filePhoto;
-                }
-
+           
             $project->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $project->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

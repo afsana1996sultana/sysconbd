@@ -120,12 +120,11 @@
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea class="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -253,12 +252,11 @@
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -385,7 +383,7 @@
 					$('#eName').val(response.team.name);
 					$('#eQualification').val(response.team.qualification);
                     $('#eDesignation').val(response.team.designation);
-					$('#textarea').html(response.team.details);
+					$('#eDetails').summernote('code', response.team.details);
                     $('#eTwitter').val(response.team.twitter);
                     $('#eFacebook').val(response.team.facebook);
                     $('#eInstagram').val(response.team.instagram);

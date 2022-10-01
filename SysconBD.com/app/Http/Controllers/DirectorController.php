@@ -27,15 +27,12 @@ class DirectorController extends Controller
         $director->facebook=$request->txtFacebook;
         $director->pinterest=$request->txtPinterest;
         $director->linkedin=$request->txtLinkedin;
-        if(isset($request->filePhoto)){
-            $director->image=$request->filePhoto;
-            }
 
         $director->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->filePhoto)){
-			$imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+            $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
 			$director->image=$imageName;
 			$director->update();
 			$request->filePhoto->move(public_path('img'),$imageName);
@@ -76,7 +73,7 @@ class DirectorController extends Controller
             $director->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->filePhoto)){
-                $imageName = (rand(100,1000)).'.'.$request->filePhoto->extension();
+                $imageName = time().(rand(100,1000)).'.'.$request->filePhoto->extension();
                 $director->image=$imageName;
                 $request->filePhoto->move(public_path('img'),$imageName);
             }

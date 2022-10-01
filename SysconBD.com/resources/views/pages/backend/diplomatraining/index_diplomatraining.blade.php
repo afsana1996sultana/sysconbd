@@ -94,9 +94,7 @@
 									<label class="col-form-label">Traing Schedule Detail:</label>
 								</div>
 								<div class="col-sm-9">
-									<textarea id="summernote" name="txtDiplomaTrainingDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtDiplomaTrainingDetails" id="txtDiplomaTrainingDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
@@ -181,12 +179,11 @@
 								`<label class="col-form-label">Traing Schedule Detail:&nbsp;</label>
 								</div>
                                 <div class="col-sm-9">
-									<textarea class="summernote" name="txtDiplomaTrainingDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eDiplomaTrainingDetails" name="txtDiplomaTrainingDetails"></textarea>
                            		 </div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -288,7 +285,7 @@
 					$('#eDiplomaTraining').val(response.diplomatraining.dt_name);
 					$('#ePrice').val(response.diplomatraining.price);
 					$('#eDuration').val(response.diplomatraining.duration);
-					$('#textarea').html(response.diplomatraining.dt_details);
+					$('#eDiplomaTrainingDetails').summernote('code', response.diplomatraining.dt_details);
 					$('#eIcon').val(response.diplomatraining.icon);
 				}
 			});

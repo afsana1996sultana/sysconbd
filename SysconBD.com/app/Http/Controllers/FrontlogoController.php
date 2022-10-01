@@ -16,15 +16,11 @@ class FrontlogoController extends Controller
 
     public function store(Request $request){
         $frontlogo=new Frontlogo; 
-        if(isset($request->fileLogo)){
-            $frontlogo->logo_img=$request->fileLogo;
-            }
-
         $frontlogo->deleted_at=$request->txtDeleted_at;
         
 
         if(isset($request->fileLogo)){
-			$logoName = (rand(100,1000)).'.'.$request->fileLogo->extension();
+            $logoName = time().(rand(100,1000)).'.'.$request->fileLogo->extension();
 			$frontlogo->logo_img=$logoName;
 			$frontlogo->update();
 			$request->fileLogo->move(public_path('img'),$logoName);
@@ -49,14 +45,12 @@ class FrontlogoController extends Controller
             $frontlogoid=$request->input('cmbFrontlogoId');
             $frontlogo = Frontlogo::find($frontlogoid);
             $frontlogo->id=$request->cmbFrontlogoId;
-            if(isset($request->fileLogo)){
-                $frontlogo->logo_img=$request->fileLogo;
-                }
 
             $frontlogo->deleted_at=$request->txtDeleted_at;
 
             if(isset($request->fileLogo)){
-                $logoName = (rand(100,1000)).'.'.$request->fileLogo->extension();
+                $logoName = time().(rand(100,1000)).'.'.$request->fileLogo->extension();
+
                 $frontlogo->logo_img=$logoName;
                 $request->fileLogo->move(public_path('img'),$logoName);
             }
