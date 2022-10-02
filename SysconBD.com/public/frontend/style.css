@@ -6075,14 +6075,14 @@ object-fit: cover;
     background-size: cover;
 }
 .misc-box-bg1 {
-    background-image: url(images/bg-counter-1.jpg);
+    background-image: url(images/bg-counter-1.webp);
 }
 .misc-box-bg2 {
-    background-image: url(images/bg-counter-2.jpg);
+    background-image: url(images/bg-counter-2.webp);
 }
 .misc-box h5 {
     color: #fff;
-    font-size: 22px;
+    font-size: 25px;
     line-height: 30px;
     margin-bottom: 5px;
 }

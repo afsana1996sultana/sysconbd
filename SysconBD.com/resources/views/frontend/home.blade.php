@@ -376,11 +376,11 @@
                     <div class="misc-box text-white misc-box-bg1">
                         <div class="ot-counter">
                             <div>
-                                <span class="num" data-to="15" data-time="2000">0</span>
+                                <span class="num" data-to="10" data-time="2000">0</span>
                                 <span>+</span>
                             </div>                    
                         </div>
-                        <h5>Countries Worldwide</h5>
+                        <h5>Divission of Bangladesh</h5>
                         <p>To succeed, every Automation Company must be deeply integrated into the existing tech environment..</p>
                     </div>
                 </div>
@@ -388,7 +388,8 @@
                     <div class="misc-box misc-box-bg2">
                         <div class="ot-counter">
                             <div>
-                                <span class="num" data-to="232" data-time="2000">0</span>
+                                <span class="num" data-to="50" data-time="2000">0</span>
+                                <span>+</span>
                             </div>                    
                         </div>
                         <h5>Happy Customers</h5>
@@ -684,8 +685,6 @@
         </div>
     </div>
     
-     
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
