@@ -15,7 +15,7 @@
                     <div class="col-md-8">
                         <ul class="topbar-info align-self-end clearfix">
                             <li><a href="tel:+8801818-497401"><i class="fas fa-phone-alt"></i>+8801818-497401</a></li>
-                            <li><a href="mailto:engitech@mail.com"><i class="fas fa-envelope"></i>info@sysconbd.com</a>
+                            <li><a href="mailto:info@sysconbd.com"><i class="fas fa-envelope"></i>info@sysconbd.com</a>
                             </li>
                         </ul>
                     </div>

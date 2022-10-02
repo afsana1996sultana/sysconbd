@@ -53,10 +53,10 @@
 							</div>
                         </td>   
                     </tr>
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
                 </tbody>
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse
             </table>
         </div>
     </div>
@@ -88,12 +88,9 @@
                         <div class="col-sm-12">
                             <div class="input-group mb-5">
                                 <label class="col-form-label">Traing Schedule Detail:</label>
-                                <textarea id="summernote" name="txtBscTrainingDetails">
-                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                </textarea>
+								<textarea name="txtBscTrainingDetails" id="txtBscTrainingDetails" class="summernote"></textarea>
                             </div>
                         </div>
-
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -153,12 +150,10 @@
 							</div>
 						</div>
 							
-						<div class="col-sm-12">
+					    <div class="col-sm-12">
                             <div class="input-group mb-5">
-                                <label class="col-form-label">Traing Schedule Detail:&nbsp;</label>
-                                <textarea class="summernote" name="txtBscTrainingDetails">
-									<div id="textarea"></div>
-								</textarea>
+                                <label class="col-form-label">Traing Schedule Detail:</label>
+								<textarea name="txtBscTrainingDetails" id="eBscTrainingDetails" class="summernote"></textarea>
                             </div>
                         </div>
 
@@ -251,6 +246,7 @@
 					$('#ePrice').val(response.bsctraining.price);
 					$('#eDuration').val(response.bsctraining.duration);
 					$('#textarea').html(response.bsctraining.bt_details);
+					$('#eBscTrainingDetails').summernote('code', response.bsctraining.bt_details);
 					$('#eIcon').val(response.bsctraining.icon);
 				}
 			});

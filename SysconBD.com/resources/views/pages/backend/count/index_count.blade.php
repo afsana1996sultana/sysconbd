@@ -56,10 +56,10 @@
 							</div>
                         </td>   
                     </tr>
-                </tbody> 
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse  
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
+                </tbody>  
             </table>
         </div>
     </div>

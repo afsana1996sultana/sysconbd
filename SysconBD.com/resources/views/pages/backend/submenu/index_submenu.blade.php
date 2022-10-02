@@ -43,9 +43,6 @@
                         <td>{{$submenu-> id}}</td>
                         <td>{{$submenu-> m_name}}</td>
                         <td>{{$submenu-> submenu_name}}</td>
-                        <!-- <td>
-						<img src="{{asset('img/'.$submenu->icon)}}" height="70px" width="70px" alt="">
-						</td> -->
                         <td class="text-right py-0 align-middle">
 							<div class="btn-group btn-group-sm">
                                 <a class="btn btn-info" href="#" data-toggle="modal" data-target="#view_submenu"><i class="fas fa-eye"></i></a>&nbsp;
@@ -54,10 +51,10 @@
 							</div>
                         </td>   
                     </tr>
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
                 </tbody>
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse 
             </table>
         </div>
     </div>
@@ -288,5 +285,4 @@
 	});
 
 </script>
-
 @endsection

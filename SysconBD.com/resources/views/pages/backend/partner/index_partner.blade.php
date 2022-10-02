@@ -52,10 +52,10 @@
 							</div>
                         </td>   
                     </tr>
-                </tbody> 
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse   
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
+                </tbody>   
             </table>
         </div>
     </div>
@@ -104,18 +104,17 @@
 						</div>
 
                          <!-- /.card-header -->
-                        <div class="col-sm-12">
+						 <div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-                               		<label class="col-form-label">Details:</label>
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea id="summernote" name="txtDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -201,13 +200,12 @@
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-								<div class="col-sm-10">
-									<textarea class="summernote" name="txtDetails">
-										<div id="textarea"></div>
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
+
 					
 						<div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -298,7 +296,7 @@
 					$('#cmbPartnerId').val(eid);		
 					$('#eCategory').val(response.partner.category);
 					$('#eTitle').val(response.partner.title);
-					$('#textarea').html(response.partner.details);
+					$('#eDetails').summernote('code', response.partner.details);
 					$("#eFilephoto").html(
                         `<img src="img/${response.partner.image}" width="100" class="img-fluid img-thumbnail">`);
 					$("#eAttach_file").html(

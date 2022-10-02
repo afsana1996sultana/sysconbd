@@ -53,10 +53,10 @@
 							</div>
                         </td>   
                     </tr>
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
                 </tbody> 
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse  
             </table>
         </div>
     </div>
@@ -98,7 +98,6 @@
 								</div>
 							</div>
 						</div>
-	
 					</div>
 
 					<div class="submit-section float-right">
@@ -227,7 +226,4 @@
 	});
 
 </script>
-
-
-
 @endsection

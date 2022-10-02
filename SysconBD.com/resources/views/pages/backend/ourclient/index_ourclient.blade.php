@@ -61,10 +61,10 @@
 							</div>
                         </td>   
                     </tr>
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
                 </tbody>
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse
             </table>
         </div>
     </div>
@@ -108,18 +108,17 @@
 						</div>
 
                         <!-- /.card-header -->
-                        <div class="col-sm-12">
+						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
-									<label class="col-form-label">Details:</label>
+									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea id="summernote" name="txtCompanyDetails">
-										Place <em>some</em> <u>text</u> <strong>here</strong>
-									</textarea>
+									<textarea name="txtCompanyDetails" id="txtCompanyDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
                         <div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -181,20 +180,19 @@
 								</div>
 							</div>
 						</div>
-							
+
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
                                 <div class="col-sm-10">
-									<textarea class="summernote" name="txtCompanyDetails">
-										<div id="textarea"></div>
-									</textarea>
+									<textarea class="summernote" id="eCompanyDetails" name="txtCompanyDetails"></textarea>
                             	</div>
                             </div>
                         </div>
 					
+
 						<div class="col-sm-12">
 							<div class="input-group mb-5">
 								<div class="col-sm-2">
@@ -273,7 +271,7 @@
 					$('#cmbOurclientId').val(eid);		
 					$('#eClientName').val(response.ourclient.c_name);
 					$('#eCompanyType').val(response.ourclient.c_type);
-					$('#textarea').html(response.ourclient.c_details);
+					$('#eCompanyDetails').summernote('code', response.ourclient.c_details);
 					$("#eFilephoto").html(
                         `<img src="img/${response.ourclient.logo_img}" width="100" class="img-fluid img-thumbnail">`);
 				}

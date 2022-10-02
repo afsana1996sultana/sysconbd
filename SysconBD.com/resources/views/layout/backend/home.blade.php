@@ -38,11 +38,6 @@
 		<link rel="stylesheet" href="{{url('backend/plugins/summernote/summernote-bs4.min.css')}}">
 		<!-- fullCalendar -->
 		<link rel="stylesheet" href="{{url('backend/plugins/fullcalendar/main.css')}}">
-		<!-- CodeMirror -->
-		<link rel="stylesheet" href="{{url('backend/plugins/codemirror/codemirror.css')}}">
-		<link rel="stylesheet" href="{{url('backend/plugins/codemirror/theme/monokai.css')}}">
-		<!-- SimpleMDE -->
-		<!-- <link rel="stylesheet" href="{{url('backend/plugins/simplemde/simplemde.min.css')}}"> -->
 
 		<!-- Jquery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -69,8 +64,6 @@
 			<div class="content-wrapper">
 				<!-- Content Header (Page header) -->
 
-				<!-- /.content-header -->
-
 				<!-- Main content -->
 				<section class="content">
 					@yield('page')
@@ -96,8 +89,6 @@
 		<script src="{{url('backend/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 		<!-- ChartJS -->
 		<script src="{{url('backend/plugins/chart.js/Chart.min.js')}}"></script>
-		<!-- Sparkline -->
-		<script src="{{url('backend/plugins/sparklines/sparkline.js')}}"></script>
 		<!-- JQVMap -->
 		<script src="{{url('backend/plugins/jqvmap/jquery.vmap.min.js')}}"></script>
 		<script src="{{url('backend/plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
@@ -132,14 +123,8 @@
 		<script src="{{url('backend/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 		<script src="{{url('backend/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 
-		<!----///////////////////////////////////////////////////!-->
-		<!-- CodeMirror -->
-		<script src="{{url('backend/plugins/codemirror/codemirror.js')}}"></script>
-		<script src="{{url('backend/plugins/codemirror/mode/css/css.js')}}"></script>
-		<script src="{{url('backend/plugins/codemirror/mode/xml/xml.js')}}"></script>
-		<script src="{{url('backend/plugins/codemirror/mode/htmlmixed/htmlmixed.js')}}"></script>
 		<!-- AdminLTE for demo purposes -->
-		<script src="{{url('backend/dist/js/demo.js')}}"></script>
+		<!-- <script src="{{url('backend/dist/js/demo.js')}}"></script> -->
 
 		<!-- fullCalendar 2.2.5 -->
 		<script src="{{url('backend/plugins/moment/moment.min.js')}}"></script>
@@ -151,33 +136,28 @@
   $(function () {
 	  
 	$(document).ready(function() {
-  	$('.summernote').summernote();
+  		$('.summernote').summernote();
 	});
 	
     // Summernote
     $('#summernote').summernote()
 
-    // CodeMirror
-    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-      mode: "htmlmixed",
-      theme: "monokai"
-    });
   })
 
-  		$(function () {
-			  $("#example1").DataTable({
-				"responsive": true, "lengthChange": false, "autoWidth": false,
-				"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-			  }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-			  $('#example2').DataTable({
-				"paging": true,
-				"lengthChange": false,
-				"ordering": true,
-				"info": true,
-				"autoWidth": false,
-				"responsive": true,
-			  });
-			});
+	$(function () {
+			$("#example1").DataTable({
+			"responsive": true, "lengthChange": false, "autoWidth": false,
+			"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+			}).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+			$('#example2').DataTable({
+			"paging": true,
+			"lengthChange": false,
+			"ordering": true,
+			"info": true,
+			"autoWidth": false,
+			"responsive": true,
+		});
+	});
 </script>
-    </body>
+</body>
 </html>

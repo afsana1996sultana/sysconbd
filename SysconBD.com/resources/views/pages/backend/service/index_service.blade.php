@@ -52,10 +52,10 @@
 							</div>
                         </td>   
                     </tr>
+					@empty
+						<div colspan="14">No records found</div>
+					@endforelse
                 </tbody>
-                @empty
-					<tr><td colspan="14">No records found</td></tr>
-				@endforelse
             </table>
         </div>
     </div>
@@ -115,20 +115,17 @@
 						</div>
 
                          <!-- /.card-header -->
-                        <div class="col-sm-12">
+						 <div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-                                <!-- <textarea class="summernote" name="txtDetails">
-                                    Place <em>some</em> <u>text</u> <strong>here</strong>
-                                </textarea> -->
-								<div class="col-sm-10">
-									<textarea rows="4" cols="84" name="txtDetails" id="txtDetails">
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea name="txtDetails" id="txtDetails" class="summernote"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
 						<div class="col-sm-12">
 							<div class="input-group mb-5">
@@ -230,21 +227,18 @@
 							</div>
 						</div>
 
+
 						<div class="col-sm-12">
                             <div class="input-group mb-5">
 								<div class="col-sm-2">
 									<label class="col-form-label">Details:&nbsp;</label>
 								</div>
-                              
-                                <!-- <textarea class="summernote" name="txtDetails">
-									<div id="textarea"></div>
-								</textarea> -->
-								<div class="col-sm-10">
-									<textarea rows="4" cols="84" id="etextarea" name="txtDetails">
-									</textarea>
+                                <div class="col-sm-10">
+									<textarea class="summernote" id="eDetails" name="txtDetails"></textarea>
                             	</div>
                             </div>
                         </div>
+
 
 						<div class="col-sm-12">
 							<div class="input-group mb-4">
@@ -349,7 +343,7 @@
 					$('#cmbServiceId').val(eid);		
 					$('#eCategory').val(response.service.category);
 					$('#eTitle').val(response.service.title);
-					$('#etextarea').html(response.service.details);
+					$('#eDetails').summernote('code', response.service.details);
 					$('#eURL').val(response.service.url);
 					$('#eIcon').val(response.service.icon);
 				
