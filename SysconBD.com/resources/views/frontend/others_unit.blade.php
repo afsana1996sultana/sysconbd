@@ -21,7 +21,7 @@
                     <div class="ot-heading">
                         <h4 class="main-heading">{{$imgData->title}}</h4>
                     </div>
-                    <p class="mb-15">{!! $imgData->details !!}</p>
+                    <p class="mb-15" style="text-align: justify;">{!! $imgData->details !!}</p>
                 </div>
                 <div class="offset-lg-1 col-lg-6 col-md-12">
                     <div class="about-right">

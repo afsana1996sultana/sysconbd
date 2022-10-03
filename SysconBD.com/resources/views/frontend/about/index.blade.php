@@ -23,7 +23,7 @@
                         <h2 class="main-heading">{{$val->heading}}</h2>
                     </div>
                     <div class="space-5"></div>
-                    <p>{!! $val->details !!}</p>      
+                    <div style="text-align: justify;">{!! $val->details !!}</div>      
                     <div class="space-20"></div>
                     @endforeach
                 </div>
@@ -85,7 +85,7 @@
                             <span>// Quality. diversifications. customer satisfaction.</span>
                             <h2 class="main-heading">What We Actually Do</h2>
                         </div>
-                        <p>SYSCON has engineered numerous challenging and multidimensional projects through which
+                        <p style="text-align: justify;">SYSCON has engineered numerous challenging and multidimensional projects through which
                         we enriched our skills, expertise and experiences. We set our benchmark in design and
                         Automation solutions, project management, support & services to a true high level to achieve
                         100% customer satisfaction. We are continuously improving our way of doing things to deliver

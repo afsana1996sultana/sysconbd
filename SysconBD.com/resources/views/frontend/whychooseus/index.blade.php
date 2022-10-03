@@ -24,7 +24,7 @@
                             <span>// about company</span>
                             <h2 class="main-heading">Syscon Engineering Ltd.</h2>
                         </div>
-                        <p class="mb-15">SYSCON have well experienced skill professional team who can provide you modern & innovative
+                        <p class="mb-15" style="text-align: justify;">SYSCON have well experienced skill professional team who can provide you modern & innovative
                         idea for your requirement as well as economic fruitful solution. more dynamic to grab new technologies,
                         more focused to customer needs and even more detailed oriented to solve the complex automation tasks while making it simple
                         to use for end user.</p>
@@ -125,7 +125,7 @@
                         <div class="content-box">
                         <div class="icon-main"><span class="{{$val->icon}}"></span></div>
                             <h5><a href="{{$val->url}}">{{$val->title}}</a></h5>
-                            <p>{!! $val->details !!}</p>
+                            <p style="text-align: justify;">{!! $val->details !!}</p>
                         </div>
                     </div>
                 </div>

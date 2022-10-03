@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Biography</h3>
-                    <p>2012, SYSCON Engineering Limited started its journey as a SIEMENS based industrial Automation
+                    <p style="text-align: justify;">2012, SYSCON Engineering Limited started its journey as a SIEMENS based industrial Automation
                     provider under the name of Syscon Engineering.  In 2017, Syscon Engineering renamed as SYSCON 
                     Engineering ltd, more dynamic to grab new technologies, more focused to customer needs and even
                     more detailed oriented to solve the complex automation tasks while making it simple to use for 
@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Hard Skills</h3>
-                    <p>Just as a Automation business in real life is remembered not just for its product
+                    <p style="text-align: justify;">Just as a Automation business in real life is remembered not just for its product
                     offerings but also because of its services, support, and customer-friendliness,
                     <span class="text-dark bold">helpful customer support system</span>
                     Over the years, SYSCON has engineered numerous challenging and multidimensional projects through
@@ -94,34 +94,6 @@
     <br>
     <br>
     <br>
-
-    <!-- <section class="team-contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <form action="https://templates.thememodern.com/engitech/teamcontact.php" method="post" class="wpcf7-form init">
-                        <div class="member-form comment-respond">
-                            <h2>Contact Me</h2>
-                            <p class="font14">Your email address will not be published. Required fields are marked *</p>
-                            <div class="row">
-                                <p class="col-md-6">
-                                    <input type="text" name="name" value="" size="40" aria-required="true" placeholder="Your Name *" required>
-                                <p class="col-md-6">
-                                    <input type="email" name="email" value="" size="40" aria-required="true" placeholder="Your Email *" required>
-                                </p>
-                            </div>
-                            <p>
-                                <textarea name="message" cols="40" rows="10" placeholder="Message..." required></textarea>
-                            </p>
-                            <p>
-                                <button type="submit" class="octf-btn octf-btn-primary">Send Message</button>
-                            </p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <div class="padding-half bg-light-1">
         <div class="container">

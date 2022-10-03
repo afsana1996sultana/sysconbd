@@ -39,7 +39,7 @@
                                             <span>{{$val->c_type}}</span>                             
                                         </div>
                                     </div>
-                                    <div class="ttext">
+                                    <div class="ttext" style="text-align: justify;">
                                     {!! $val->c_details !!}                           
                                     </div>
                                 </div>

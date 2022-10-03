@@ -21,7 +21,7 @@
                     <div class="ot-heading">
                         <h4 class="main-heading">{{$BusinessData->heading}}:</h4>
                     </div>
-                    <p class="mb-15">{!! $BusinessData->details !!}</p>
+                    <p class="mb-15" style="text-align: justify;">{!! $BusinessData->details !!}</p>
                 </div>
                 <div class="offset-lg-1 col-lg-6 col-md-12">
                     <div class="about-right">

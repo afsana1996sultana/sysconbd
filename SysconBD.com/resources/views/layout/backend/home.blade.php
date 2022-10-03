@@ -16,8 +16,7 @@
 		<link rel="stylesheet" href="{{url('backend/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
 		<!-- iCheck -->
 		<link rel="stylesheet" href="{{url('backend/plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-		<!-- JQVMap -->
-		<link rel="stylesheet" href="{{url('backend/plugins/jqvmap/jqvmap.min.css')}}">
+
 		<!-- Theme style -->
 		<link rel="stylesheet" href="{{url('backend/dist/css/adminlte.min.css')}}">
 		<!-- overlayScrollbars -->
@@ -48,11 +47,7 @@
 	</head>
     <body class="hold-transition light-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 		<!-- Main Wrapper -->
-        <div class="main-wrapper">
-
-			<!-- Preloader -->
-			{{-- @include("layout.backend.preload")--}}
-			
+        <div class="main-wrapper">			
 			<!-- Navbar -->
 			@include("layout.backend.navbar")
 			<!-- /.navbar -->
@@ -123,12 +118,6 @@
 		<script src="{{url('backend/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 		<script src="{{url('backend/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
 
-		<!-- AdminLTE for demo purposes -->
-		<!-- <script src="{{url('backend/dist/js/demo.js')}}"></script> -->
-
-		<!-- fullCalendar 2.2.5 -->
-		<script src="{{url('backend/plugins/moment/moment.min.js')}}"></script>
-		<script src="{{url('backend/plugins/fullcalendar/main.js')}}"></script>
 		<!--jquery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js" integrity="sha512-cJMgI2OtiquRH4L9u+WQW+mz828vmdp9ljOcm/vKTQ7+ydQUktrPVewlykMgozPP+NUBbHdeifE6iJ6UVjNw5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		@yield('scripts')

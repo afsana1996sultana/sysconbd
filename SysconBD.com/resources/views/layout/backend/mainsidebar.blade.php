@@ -59,13 +59,6 @@
               </li>
             </ul>
           </li>
-
-          <li class="nav-item">
-            <a href="{{url('/calender')}}" class="nav-link">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>Calender</p>   
-            </a>
-          </li>
   
           <li class="nav-item">
             <a href="{{url('/users')}}" class="nav-link">
@@ -84,7 +77,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{url('/home')}}" class="nav-link">
+                <a href="{{url('/')}}" target="blank" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Main page</p>
                 </a>
@@ -247,12 +240,7 @@
                   <p>Categories of  Projects</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="{{url('/project')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p> Projects</p>
-                </a>
-              </li> -->
+  
               <li class="nav-item">
                 <a href="{{url('/allproject')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
@@ -261,30 +249,6 @@
               </li>
             </ul>
           </li>
-
-          <!-- <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                Gallery
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="{{url('/gallerycategories')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Categories of Gallery</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{url('/galleries')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Gallery</p>
-                </a>
-              </li>
-            </ul>
-          </li> -->
 
           <li class="nav-item">
             <a href="#" class="nav-link">

@@ -30,7 +30,7 @@
                         <div class="icon-main"><span class="{!! $val->icon !!}"></span></div>
                         <div class="content-box">
                             <h5>{{$val->title}}</h5>
-                            <p>{!! $val->details !!}</p>
+                            <p style="text-align: justify;">{!! $val->details !!}</p>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                             <div class="overlay flex-middle">
                                 <span class="number-box">{{$val->id}}</span>
                                 <div class="inner">
-                                    <p>{!! $val->details !!}</p>
+                                    <p style="text-align: justify; color: white;">{!! $val->details !!}</p>
                                     <a href="{{$val->url}}" class="btn-details"><i class="flaticon-right-arrow-1"></i> LEARN MORE</a>
                                 </div>
                             </div>
@@ -92,6 +92,5 @@
             </div>
         </div>
     </div>
-
 </div>
 @endsection

@@ -265,8 +265,6 @@
         </div>
     </div>
 
-
-
     <div class="padding-half bg-light-1">
         <div class="container">
             <div class="row">
@@ -376,12 +374,12 @@
                     <div class="misc-box text-white misc-box-bg1">
                         <div class="ot-counter">
                             <div>
-                                <span class="num" data-to="10" data-time="2000">0</span>
+                                <span class="num" data-to="63" data-time="2000">0</span>
                                 <span>+</span>
                             </div>                    
                         </div>
-                        <h5>Divission of Bangladesh</h5>
-                        <p>To succeed, every Automation Company must be deeply integrated into the existing tech environment..</p>
+                        <h5>Accomplished projects</h5>
+                        <p>We provide digital strategy, innovative technology and industrial IOT based business solutions to large local and international organizations around the globe.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
@@ -392,8 +390,8 @@
                                 <span>+</span>
                             </div>                    
                         </div>
-                        <h5>Happy Customers</h5>
-                        <p>To succeed, every Automation Company must be good relationship with clients....</p>
+                        <h5>Happy Clients</h5>
+                        <p>Building and maintaining long-term relationships is our top priority. Our team is always ready to hear our client first and fullfill their demands..</p>
                     </div>
                 </div>
             </div>
@@ -420,7 +418,7 @@
                         <div class="icon-main"><span class="{!! $val->icon !!}"></span></div>
                         <div class="content-box">
                             <h5>{{$val->title}}</h5>
-                            <p>{!! $val->details !!}</p>
+                            <p style="text-align: justify;">{!! $val->details !!}</p>
                         </div>
                     </div>
                 </div>

@@ -37,7 +37,7 @@
                             <h4 class="title-table pt-5">{{$val->bt_name}}</h4>
                             <h2><sup>$</sup>{{$val->price}}</h2>
                             <span>{{$val->duration}}</span>
-                            <div class="details">
+                            <div class="details" style="text-align: justify;">
                                 <p>{!! $val->bt_details !!}</p> 
                             </div>
                             <a href="#" class="octf-btn">Choose Plane</a>
@@ -49,7 +49,6 @@
         </div>
     </section>
 
-  
     <section class="elements-pricing pt-4">
         <div class="container">
             <div class="row">
@@ -67,7 +66,7 @@
                             <h4 class="title-table pt-5">{{$val->dt_name}}</h4>
                             <h2><sup>$</sup>{{$val->price}}</h2>
                             <span>{{$val->duration}}</span>
-                            <div class="details ">
+                            <div class="details " style="text-align: justify;">
                                 <p>{!! $val->dt_details !!}</p>
                             </div>
                             <a href="#" class="octf-btn">Choose Plane</a>
@@ -103,5 +102,4 @@
         </div>
     </section>
 </div>
-
 @endsection
